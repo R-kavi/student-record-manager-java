@@ -1,35 +1,36 @@
 /*
- * This project aims to build a software module over SQL database that can manage Student Record.
- * In summation, JDBC driver is used to handle SQL statements in Java.
+ * STUDENT-RECORD-MANAGER
+ * -----------------------------------------------
+ * Developed a core Java application integrated with a MySQL database to manage student records,
+ * course enrollment, and grade management through a simple console interface.
  *
- * Firstly, establish a secure connection using DriverManager and check if database is already present or not.
- * If not, then i have created a new Database with STUDENT_RECORD.
- * Now, similarly i checked tables also, if not, i have created them in the same database.
+ *  Database & JDBC:
+ * - Establishes a secure connection using JDBC (DriverManager).
+ * - Checks for the presence of the 'STUDENT_RECORD' database. If absent, creates it dynamically.
+ * - Verifies the existence of required tables; creates them if missing before proceeding.
  *
- * Student Login: it checks for the student entry in table "login" categoried to Type field "Student"
- * if yes, a menu is displayed related to the addition and removal of student courses.
- * ResultSet rs is used to store the executed SQL statement
+ *  Student Functionalities:
+ * - Login system for students using credentials stored in the 'login' table.
+ * - Add and remove courses, view full profile, view grades, and update password.
  *
- * 1. Check if database is already present in the Catalog.
- * 		(a) if yes, return the database string.
- * 		(b) else create the required database: STUDENT_RECORD
- * 2. Check for Tables in the database choosed.
- * 		(a) if all the tables already exists, display main menu.
- * 		(b) else first create the missing table/tables, then display the main menu.
- * 3. MainMenu:
- *      (a) Student Login: check for authenticity by adding a password
- *      	(1) for adding a course, Insert
- *      	(2) for removing a course
- *      	(3) for displaying students full information
- *      	(4) for displaying grade information
- *      	(5) for changing password
- *      (b) TA Login: check for authenticity by adding a secure password connection
- *      	(1) for adding grades
- *      	(2) for changing password
- *      (c) SignIn: in case of new registration
- *      	(1) addition of a new entry
- *      (d) Searching: Student Search
+ *  TA Functionalities:
+ * - TA login to add grades and update passwords securely.
+ *
+ *  New Registration:
+ * - Allows new students to sign up and get added to the database.
+ *
+ *  Search:
+ * - Enables searching for student records by ID or other details.
+ *
+ *  Tech Used:
+ * - Core Java (OOPs, Exception Handling, Collections)
+ * - JDBC (MySQL Connector)
+ * - MySQL Database
+ *
+ * Developed by: Kaviya R
+ * GitHub: https://github.com/R-Kavi/student-record-manager-java
  */
+
 
 import java.io.IOException;
 import java.util.Scanner;
